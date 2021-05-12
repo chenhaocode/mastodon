@@ -9,7 +9,7 @@ module Mastodon
     end
 
     def minor
-      3
+      4
     end
 
     def patch
@@ -17,7 +17,7 @@ module Mastodon
     end
 
     def flags
-      '~B612~Kira!'
+      'rc2~B612~Kira!'
     end
 
     def suffix

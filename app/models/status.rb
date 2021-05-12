@@ -160,11 +160,15 @@ class Status < ApplicationRecord
   end
 
   def local?
-    attributes['local'] || uri.nil?
+	  attributes['local'] || uri.nil?
   end
 
   def local_only?
-    local_only
+	  local_only
+  end
+
+  def in_reply_to_local_account?
+    reply? && thread&.account&.local?
   end
 
   def reblog?
