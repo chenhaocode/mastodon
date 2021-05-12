@@ -46,12 +46,8 @@ en:
         password: Use at least 8 characters
         phrase: Will be matched regardless of casing in text or content warning of a post
         scopes: Which APIs the application will be allowed to access. If you select a top-level scope, you don't need to select individual ones.
-<<<<<<< HEAD
-        setting_aggregate_reblogs: Do not show new boosts for toots that have been recently boosted (only affects newly-received boosts)
         setting_default_federation: Toots do not federate to other instances unless manually changed while composing
-=======
         setting_aggregate_reblogs: Do not show new boosts for posts that have been recently boosted (only affects newly-received boosts)
->>>>>>> 9b18914c3572be5b661e4d8e31578fae4ee347be
         setting_default_sensitive: Sensitive media is hidden by default and can be revealed with a click
         setting_display_media_default: Hide media marked as sensitive
         setting_display_media_hide_all: Always hide media
