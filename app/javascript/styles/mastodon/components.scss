@@ -954,6 +954,7 @@
 
 .status__content__read-more-button {
   display: block;
+  margin-top: 8px;
   // font-size: 15px;
   // line-height: 20px;
   // color: lighten($ui-highlight-color, 8%);
@@ -967,19 +968,6 @@
   // &:active {
   //   text-decoration: underline;
   // }
-  font-size: 15px;
-  line-height: 20px;
-  color: lighten($ui-highlight-color, 8%);
-  border: 0;
-  background: transparent;
-  padding: 0;
-  padding-top: 8px;
-  text-decoration: none;
-
-  &:hover,
-  &:active {
-    text-decoration: underline;
-  }
 }
 
 .status__content__edited-label {
