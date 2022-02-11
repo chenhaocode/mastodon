@@ -60,11 +60,8 @@ const initialState = ImmutableMap({
   spoiler: false,
   spoiler_text: '',
   privacy: null,
-<<<<<<< HEAD
   federation: null,
-=======
   id: null,
->>>>>>> 6f38765fccfeeed6c39a3b11962a518cae1cca4c
   text: '',
   focusDate: null,
   caretPosition: null,
