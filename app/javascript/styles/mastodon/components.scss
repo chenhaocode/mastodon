@@ -954,7 +954,6 @@
 
 .status__content__read-more-button {
   display: block;
-  margin-top: 8px;
   // font-size: 15px;
   // line-height: 20px;
   // color: lighten($ui-highlight-color, 8%);
@@ -968,9 +967,33 @@
   // &:active {
   //   text-decoration: underline;
   // }
+  font-size: 15px;
+  line-height: 20px;
+  color: lighten($ui-highlight-color, 8%);
+  border: 0;
+  background: transparent;
+  padding: 0;
+  padding-top: 8px;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
 }
 
-.status__content__read-more-button,
+.status__content__edited-label {
+  display: block;
+  cursor: default;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 0;
+  padding-top: 8px;
+  color: $dark-text-color;
+  font-weight: 500;
+}
+
+>>>>>>> 097c4903f1755f6657631759cbcf237f2966ede3
 .status__content__spoiler-link {
   display: inline-block;
   border-radius: 2px;
@@ -3082,17 +3105,20 @@ a.account__display-name {
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  color: $inverted-text-color;
-  background: $simple-background-color;
-  padding: 10px;
+  color: $darker-text-color;
+  background: transparent;
+  padding: 7px 0;
   font-family: inherit;
   font-size: 14px;
   resize: vertical;
   border: 0;
+  border-bottom: 2px solid $ui-primary-color;
   outline: 0;
-  border-radius: 4px;
 
-  &:focus {
+  &:focus,
+  &:active {
+    color: $primary-text-color;
+    border-bottom-color: $ui-highlight-color;
     outline: 0;
   }
 
@@ -3930,7 +3956,8 @@ a.status-card.compact:hover {
     }
 
     &__multi-value__label,
-    &__input {
+    &__input,
+    &__input-container {
       color: $darker-text-color;
     }
 
