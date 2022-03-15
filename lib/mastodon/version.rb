@@ -9,15 +9,15 @@ module Mastodon
     end
 
     def minor
-      4
+      5
     end
 
     def patch
-      6
+      0
     end
 
     def flags
-      '~B612~Kira!'
+      '~B612~Kira!~rc1'
     end
 
     def suffix
