@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class NodeInfo::Serializer < ActiveModel::Serializer
+class TrueInfo::Serializer < ActiveModel::Serializer
   include RoutingHelper
 
   attributes :version, :software, :protocols, :usage, :open_registrations
@@ -24,12 +24,12 @@ class NodeInfo::Serializer < ActiveModel::Serializer
   def usage
     {
       users: {
-        total: 1, #instance_presenter.user_count,
-        active_month: 1, #instance_presenter.active_user_count(4),
-        active_halfyear: 1, #instance_presenter.active_user_count(24),
+        total: instance_presenter.user_count,
+        active_month: instance_presenter.active_user_count(4),
+        active_halfyear: instance_presenter.active_user_count(24),
       },
 
-      local_posts: 100, #instance_presenter.status_count,
+      local_posts: instance_presenter.status_count,
     }
   end
 

@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get '.well-known/change-password', to: redirect('/auth/edit')
 
   get '/nodeinfo/2.0', to: 'well_known/nodeinfo#show', as: :nodeinfo_schema
+  get '/trueinfo/site', to: 'well_known/trueinfo#show', as: :trueinfo_schema
 
   get 'manifest', to: 'manifests#show', defaults: { format: 'json' }
   get 'intent', to: 'intents#show'
