@@ -36,13 +36,13 @@ jobs:
           # build-args: |
           #   arg1=value1
           #   arg2=value2
-          cache-from: type=registry,ref=mashirozx/mastodon:alpha
+          cache-from: type=registry,ref=haocode/mastodon:alpha
           cache-to: type=inline
-          # tags: mashirozx/mastodon:alpha
+          # tags: haocode/mastodon:alpha
           tags: |
-            mashirozx/mastodon:alpha
-            mashirozx/mastodon:latest
-            mashirozx/mastodon:sha-${{steps.vars.outputs.sha_short}}
+            haocode/mastodon:alpha
+            haocode/mastodon:latest
+            haocode/mastodon:sha-${{steps.vars.outputs.sha_short}}
 
       # - name: ⚓ Build and push Docker images
       #   uses: docker/build-push-action@v1
