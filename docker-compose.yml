@@ -44,7 +44,7 @@ services:
 
   web:
     build: .
-    image: mashirozx/mastodon:latest
+    image: haocode/mastodon:latest
     restart: always
     env_file: .env.production
     command: bash -c "rm -f /mastodon/tmp/pids/server.pid; bundle exec rails s -p 3000"
@@ -65,7 +65,7 @@ services:
 
   streaming:
     build: .
-    image: mashirozx/mastodon:latest
+    image: haocode/mastodon:latest
     restart: always
     env_file: .env.production
     command: node ./streaming
@@ -83,7 +83,7 @@ services:
 
   sidekiq:
     build: .
-    image: mashirozx/mastodon:latest
+    image: haocode/mastodon:latest
     restart: always
     env_file: .env.production
     command: bundle exec sidekiq
@@ -117,7 +117,7 @@ services:
 
 translate:
   restart: always
-  image: mashirozx/google-translate-server:latest
+  image: haocode/google-translate-server:latest
   # ports:
   #   - "0.0.0.0:30031:30031"
   command: "npm start -- --domain ${DOMAIN:-com}"
